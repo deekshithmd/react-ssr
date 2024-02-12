@@ -3,9 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { hydrateRoot } from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.hydrate(
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.hydrate(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
+
+hydrateRoot(
+  document.getElementById("root"),
   <React.StrictMode>
     <App />
   </React.StrictMode>
